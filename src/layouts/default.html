@@ -26,5 +26,17 @@
       {{> body}}
 
       <script src="{{root}}assets/js/app.js"></script>
+      <script src="{{root}}assets/js/typed.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function(){
+          Typed.new(".typing", {
+            strings: ["Intelligent Systems", "Smart Bots", "Distributed Networks", "Data Platforms", "Analytical Products"],
+            typeSpeed: 100,
+            backDelay: 1500,
+            loop: true
+          });
+        });
+      </script>
   </body>
 </html>

@@ -1,0 +1,92 @@
+body {
+  background-color: #473B7B;
+}
+
+// Splash Hero
+.hero {
+  color: #fff;
+  border: 0;
+}
+
+.logo {
+  width: 240px;
+  margin-bottom: 20px;
+}
+
+.hero-wrap {
+  text-align: center;
+  width: 100%;
+  margin-top: 160px;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  h1 {
+    font-weight: 700;
+  }
+}
+
+.about {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.collective {
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+
+    img {
+      width: 70px;
+      float: left;
+      display: inline;
+      margin-right: 20px;
+    }
+
+    h5 {
+      font-size: 24px;
+      font-weight: bold;
+      display: inline;
+    }
+
+    p {
+      font-size: 90%;
+    }
+
+    a {
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.milk {
+  text-align: center;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+}
+
+.sticker {
+  width: 140px;
+  margin-bottom: 40px;
+}

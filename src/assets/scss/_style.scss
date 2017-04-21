@@ -49,17 +49,29 @@ body {
 }
 
 .hero-wrap {
-  position: relative;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
   width: 100%;
-  margin-top: 80px;
-  margin-bottom: 50px;
-  padding-bottom: 40px;
+//  margin-top: 80px;
+//  margin-bottom: 50px;
+//  padding-bottom: 40px;
   z-index: 2;
 //  border-bottom: 1px solid rgba(255,255,255,0.2);
 
   h2 {
+    img {
+      margin-top: 80px;
+    }
+
     font-weight: 500;
     font-size: 135%;
+  }
+
+  .title-wrap {
+    position: absolute;
+    bottom: 25px;
   }
 
   h1 {
@@ -68,25 +80,48 @@ body {
   }
 
   h5 {
+    font-weight: 300;
     margin-top: 240px;
     text-transform: uppercase;
   }
+
+  .button-wrapper {
+    display: block;
+    margin-top: 150px;
+  }
+
+  .scroll {
+    img {
+      width: 40px;
+    }
+  }
 }
 
-.about {
-  margin-bottom: 50px;
-  padding-bottom: 40px;
-//  border-bottom: 1px solid rgba(255,255,255,0.2);
+.section {
+  margin: 80px 0;
+  color: #fff;
+  font-weight: 300;
+
+  h4 {
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+
+  .button {
+    margin-top: 20px;
+  }
+}
+
+.about,
+.inquiry {
+  padding-bottom: 80px;
 }
 
 .collective {
   margin-bottom: 50px;
   padding-bottom: 40px;
-//  border-bottom: 1px solid rgba(255,255,255,0.2);
-
-  h4 {
-    margin-bottom: 20px;
-  }
 
   ul {
     padding: 0;
@@ -108,7 +143,7 @@ body {
 
     h5 {
       font-size: 24px;
-      font-weight: bold;
+      font-weight: 500;
       display: inline;
     }
 
@@ -127,13 +162,36 @@ body {
 }
 
 .milk {
-  margin-bottom: 50px;
-  padding-bottom: 40px;
+  margin-bottom: 0;
+  padding-bottom: 80px;
+}
+
+.font500 {
+  font-weight: 500;
+}
+
+form {
+  label {
+    color: #fff;
+    font-size: 90%;
+  }
 }
 
 .sticker {
   width: 140px;
   margin-bottom: 40px;
+}
+
+.footer {
+  border: 0;
+  margin: 20px 0;
+  padding: 0;
+  font-weight: 500;
+
+  img {
+    width: 100px;
+    margin-top: 10px;
+  }
 }
 
 // Blinking cursor for Typed.JS

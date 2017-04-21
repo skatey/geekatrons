@@ -1,76 +1,74 @@
-// Fira Code Font
-
-@font-face{
-    font-family: 'Fira Code';
-    src: url('assets/fonts/eot/FiraCode-Light.eot');
-    src: url('assets/fonts/eot/FiraCode-Light.eot') format('embedded-opentype'),
-         url('assets/fonts/woff2/FiraCode-Light.woff2') format('woff2'),
-         url('assets/fonts/woff/FiraCode-Light.woff') format('woff'),
-         url('assets/fonts/ttf/FiraCode-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Code';
-    src: url('assets/fonts/eot/FiraCode-Regular.eot');
-    src: url('assets/fonts/eot/FiraCode-Regular.eot') format('embedded-opentype'),
-         url('assets/fonts/woff2/FiraCode-Regular.woff2') format('woff2'),
-         url('assets/fonts/woff/FiraCode-Regular.woff') format('woff'),
-         url('assets/fonts/ttf/FiraCode-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Code';
-    src: url('assets/fonts/eot/FiraCode-Medium.eot');
-    src: url('assets/fonts/eot/FiraCode-Medium.eot') format('embedded-opentype'),
-         url('assets/fonts/woff2/FiraCode-Medium.woff2') format('woff2'),
-         url('assets/fonts/woff/FiraCode-Medium.woff') format('woff'),
-         url('assets/fonts/ttf/FiraCode-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face{
-    font-family: 'Fira Code';
-    src: url('assets/fonts/eot/FiraCode-Bold.eot');
-    src: url('assets/fonts/eot/FiraCode-Bold.eot') format('embedded-opentype'),
-         url('assets/fonts/woff2/FiraCode-Bold.woff2') format('woff2'),
-         url('assets/fonts/woff/FiraCode-Bold.woff') format('woff'),
-         url('assets/fonts/ttf/FiraCode-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-}
-
 // Body background color
 
 body {
   background-color: #473B7B;
 }
 
+// Full-screen Video in Hero
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+}
+
+.video-overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
 // Splash Hero
 .hero {
   color: #fff;
   border: 0;
+  height: 100vh;
+  position: relative;
 }
 
 .logo {
-  width: 240px;
-  margin-bottom: 20px;
+  width: 180px;
+  margin-bottom: 10px;
 }
 
 .hero-wrap {
-  text-align: center;
+  position: relative;
   width: 100%;
-  margin-top: 160px;
+  margin-top: 80px;
   margin-bottom: 50px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 2;
+//  border-bottom: 1px solid rgba(255,255,255,0.2);
+
+  h2 {
+    font-weight: 500;
+    font-size: 135%;
+  }
 
   h1 {
-    font-weight: 500;
+    font-weight: 600;
+  }
+
+  h5 {
+    margin-top: 240px;
+    text-transform: uppercase;
   }
 }
 
@@ -78,13 +76,13 @@ body {
   text-align: center;
   margin-bottom: 50px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+//  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .collective {
   margin-bottom: 50px;
   padding-bottom: 40px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+//  border-bottom: 1px solid rgba(255,255,255,0.2);
 
   h4 {
     margin-bottom: 20px;

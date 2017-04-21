@@ -1,5 +1,7 @@
 $(document).foundation();
 
+// Gradient Body Animation
+
 // target to give background to
 var $div = document.getElementById("gradient");
 // rgb vals of the gradients

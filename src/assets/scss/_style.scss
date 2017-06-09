@@ -45,7 +45,6 @@ body {
 
 .logo {
   width: 180px;
-  margin-bottom: 10px;
 }
 
 .hero-wrap {
@@ -65,8 +64,8 @@ body {
       margin-top: 80px;
     }
 
-    font-weight: 500;
-    font-size: 135%;
+    font-weight: 700;
+    font-size: 157%;
   }
 
   .title-wrap {
@@ -75,7 +74,7 @@ body {
   }
 
   h1 {
-    font-weight: 600;
+    font-weight: 700;
     display: inline;
   }
 
@@ -98,12 +97,12 @@ body {
 }
 
 .section {
-  margin: 80px 0;
+  padding: 80px 0;
   color: #fff;
   font-weight: 300;
 
-  h4 {
-    font-weight: 500;
+  h3 {
+    font-weight: 700;
     margin-bottom: 40px;
   }
 
@@ -143,7 +142,7 @@ body {
 
     h5 {
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 700;
       display: inline;
     }
 
@@ -161,13 +160,17 @@ body {
   }
 }
 
+.avatar {
+  margin-top: -6px;
+}
+
 .milk {
   margin-bottom: 0;
   padding-bottom: 80px;
 }
 
 .font500 {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 form {
@@ -186,11 +189,11 @@ form {
   border: 0;
   margin: 20px 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 700;
 
   img {
     width: 100px;
-    margin-top: 10px;
+    margin-right: 10px;
   }
 }
 

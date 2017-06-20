@@ -6,9 +6,10 @@ $(document).foundation();
 var $div = document.getElementById("gradient");
 // rgb vals of the gradients
 var gradients = [
-  { start: [128,179,171], stop: [30,41,58] },
-  { start: [255,207,160], stop: [234,92,68] },
-  { start: [212,121,121], stop: [130,105,151] }
+  {start: [255, 255, 255], stop: [30, 41, 58]},
+  // {start: [128, 179, 171], stop: [30, 41, 58]},
+  // {start: [255, 207, 160], stop: [234, 92, 68]},
+  {start: [212, 121, 121], stop: [130, 105, 151]}
 ];
 // how long for each transition
 var transition_time = 10;
@@ -17,16 +18,16 @@ var transition_time = 10;
 var currentIndex = 0; // where we are in the gradients array
 var nextIndex = 1; // what index of the gradients array is next
 var steps_count = 0; // steps counter
-var steps_total = Math.round(transition_time*60); // total amount of steps
+var steps_total = Math.round(transition_time * 60); // total amount of steps
 var rgb_steps = {
-  start: [0,0,0],
-  stop: [0,0,0]
+  start: [0, 0, 0],
+  stop: [0, 0, 0]
 }; // how much to alter each rgb value
 var rgb_values = {
-  start: [0,0,0],
-  stop: [0,0,0]
+  start: [0, 0, 0],
+  stop: [0, 0, 0]
 }; // the current rgb values, gets altered by rgb steps on each interval
-var prefixes = ["-webkit-","-moz-","-o-","-ms-",""]; // for looping through adding styles
+var prefixes = ["-webkit-", "-moz-", "-o-", "-ms-", ""]; // for looping through adding styles
 var div_style = $div.style; // short cut to actually adding styles
 var color1, color2;
 
@@ -36,7 +37,7 @@ function set_next(num) {
 }
 
 // work out how big each rgb step is
-function calc_step_size(a,b) {
+function calc_step_size(a, b) {
   return (a - b) / steps_total;
 }
 
@@ -44,28 +45,28 @@ function calc_step_size(a,b) {
 function calc_steps() {
   for (var key in rgb_values) {
     if (rgb_values.hasOwnProperty(key)) {
-      for(var i = 0; i < 3; i++) {
+      for (var i = 0; i < 3; i++) {
         rgb_values[key][i] = gradients[currentIndex][key][i];
-        rgb_steps[key][i] = calc_step_size(gradients[nextIndex][key][i],rgb_values[key][i]);
+        rgb_steps[key][i] = calc_step_size(gradients[nextIndex][key][i], rgb_values[key][i]);
       }
     }
   }
 }
 
 // update current rgb vals, update DOM element with new CSS background
-function updateGradient(){
+function updateGradient() {
   // update the current rgb vals
   for (var key in rgb_values) {
     if (rgb_values.hasOwnProperty(key)) {
-      for(var i = 0; i < 3; i++) {
+      for (var i = 0; i < 3; i++) {
         rgb_values[key][i] += rgb_steps[key][i];
       }
     }
   }
 
   // generate CSS rgb values
-  var t_color1 = "rgb("+(rgb_values.start[0] | 0)+","+(rgb_values.start[1] | 0)+","+(rgb_values.start[2] | 0)+")";
-  var t_color2 = "rgb("+(rgb_values.stop[0] | 0)+","+(rgb_values.stop[1] | 0)+","+(rgb_values.stop[2] | 0)+")";
+  var t_color1 = "rgb(" + (rgb_values.start[0] | 0) + "," + (rgb_values.start[1] | 0) + "," + (rgb_values.start[2] | 0) + ")";
+  var t_color2 = "rgb(" + (rgb_values.stop[0] | 0) + "," + (rgb_values.stop[1] | 0) + "," + (rgb_values.stop[2] | 0) + ")";
 
   // has anything changed on this interation
   if (t_color1 != color1 || t_color2 != color2) {
@@ -75,9 +76,9 @@ function updateGradient(){
     color2 = t_color2;
 
     // update DOM element style attribute
-    div_style.backgroundImage = "-webkit-gradient(linear, left bottom, right top, from("+color1+"), to("+color2+"))";
-    for (var i = 0; i < 4; i++) {
-      div_style.backgroundImage = prefixes[i]+"linear-gradient(-45deg, "+color1+", "+color2+")";
+    div_style.backgroundImage = "-webkit-gradient(linear, left bottom, right top, from(" + color1 + "), to(" + color2 + "))";
+    for (; i < 4; i++) {
+      div_style.backgroundImage = prefixes[i] + "linear-gradient(-45deg, " + color1 + ", " + color2 + ")";
     }
   }
 
@@ -94,7 +95,7 @@ function updateGradient(){
     calc_steps();
   }
 
-  if (div_style.backgroundImage.indexOf("gradient") != -1) {
+  if (div_style.backgroundImage.indexOf("gradient") !== -1) {
     window.requestAnimationFrame(updateGradient)
   }
 }

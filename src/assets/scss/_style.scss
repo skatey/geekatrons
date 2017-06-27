@@ -74,11 +74,20 @@ body {
   .title-wrap {
     position: absolute;
     bottom: 25px;
+    width: 85%;
+
+    @include breakpoint(small only) {
+      width: 75%
+    }
   }
 
   h1 {
     font-weight: 700;
     display: inline;
+
+    @include breakpoint(small only) {
+      font-size: 28px;
+    }
   }
 
   h5 {
@@ -91,7 +100,7 @@ body {
     margin-top: 150px;
 
     @include breakpoint(small only) {
-      margin-top: 80px;
+      margin-top: 60px;
     }
   }
 
@@ -214,6 +223,10 @@ form {
   -moz-animation: blink 0.7s infinite;
   animation: blink 0.7s infinite;
   font-size: 220%;
+
+  @include breakpoint(small only) {
+    font-size: 120%;
+  }
 }
 
 @keyframes blink {

@@ -4,3 +4,4 @@ test
 npm-debug.log
 *.swp
 bower_components
+.idea

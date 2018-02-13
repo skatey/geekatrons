@@ -16,10 +16,17 @@ body {
   background: #000;
 }
 
-.video-container video {
+.video-wrap {
   position: absolute;
-  z-index: 0;
+  left: 50%;
   bottom: 0;
+  z-index: 0;
+}
+
+.video-container video {
+  position: relative;
+  left: -50%;
+  vertical-align: bottom;
   width: auto;
   height: auto;
 }

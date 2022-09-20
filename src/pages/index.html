@@ -205,7 +205,11 @@
 <div class="section footer" id="footer">
   <div class="row">
     <div class="large-8">
-      <img class="logo" src="assets/img/geekatrons-horizontal.svg"/> geekatrons <span class="hide-for-small-only">collective 2020</span>
+      <img class="logo" src="assets/img/geekatrons-horizontal.svg"/> geekatrons <span class="hide-for-small-only" id="date-footer">collective 2020</span>
     </div>
   </div>
 </div>
+
+<script>
+  document.getElementById("date-footer").innerHTML = "collective " + new Date().getFullYear();
+</script>

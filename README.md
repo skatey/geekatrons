@@ -57,8 +57,10 @@ Then open the folder in your command line, and install the needed dependencies:
 ```bash
 cd projectname
 npm install
-bower install
+./node_modules/bower/bin/bower install
 ```
+
+On some linux distributions you may have to run `env CXXFLAGS="-std=c++17" npm install`
 
 Finally, run `npm start` to run Gulp. Your finished site will be created in a folder called `dist`, viewable at this URL:
 

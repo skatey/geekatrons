@@ -57,7 +57,7 @@
 <div class="hero">
   <div class="video-container">
     <div class="video-wrap">
-      <video preload="auto" autoplay="autoplay" loop="loop" class="fillWidth">
+      <video preload="auto" autoplay="autoplay" loop="loop" autoPlay="autoPlay" muted="muted" class="fillWidth">
         <source src="assets/video/Northernlights2_HD.mp4" type="video/mp4"/>
       </video>
     </div>
@@ -131,8 +131,8 @@
         </li>
         <li>
           <img class="avatar" src="assets/img/geekatrons-human.svg"/>
-          <h5><a href="https://www.linkedin.com/in/nejc-ilenic/">Nejc Ilenic</a></h5>
-          <p>python, scala, machine learning, hiking, mtb</p>
+          <h5><a href="https://www.linkedin.com/in/simon-zlender/">Simon Žlender</a></h5>
+          <p>elixir, rust, ruby, engineer, windsurfing</p>
         </li>
       </ul>
     </div>
@@ -146,8 +146,8 @@
         </li>
         <li>
           <img class="avatar" src="assets/img/geekatrons-hybrid.svg"/>
-          <h5><a href="https://www.linkedin.com/in/petercuhalev/">Peter Čuhalev</a></h5>
-          <p>founder, product, design, uxui, bread</p>
+          <h5><a href="https://www.linkedin.com/in/lknix/">Luka Kacil</a></h5>
+          <p>mba, python, management, products, tennis</p>
         </li>
         <li>
           <img class="avatar" src="assets/img/geekatrons-pirate.svg"/>
@@ -155,14 +155,14 @@
           <p>web, distributed, ai, engineer, team</p>
         </li>
         <li>
-          <img class="avatar" src="assets/img/geekatrons-girl.svg"/>
-          <h5><a href="https://www.linkedin.com/in/sabina-hosta-13a00a135/">Sabina Hosta</a></h5>
-          <p>founder, design, video, web, organization, fashion</p>
-        </li>
-        <li>
           <img class="avatar" src="assets/img/geekatrons-bot.svg"/>
           <h5><a href="https://www.linkedin.com/in/urbanskudnik/">Urban Škudnik</a></h5>
           <p>python, django, web, javascript, skiing</p>
+        </li>
+        <li>
+          <img class="avatar" style="visibility: hidden;" src="assets/img/geekatrons-girl.svg"/>
+          <h5><a href="#help">-- Join us --</a></h5>
+          <p>Contact us via form bellow</p>
         </li>
       </ul>
       <br/>
@@ -188,6 +188,11 @@
         </li>
         <li>
           <img class="avatar" src="assets/img/geekatrons-404.svg"/>
+          <h5><a href="https://www.linkedin.com/in/petercuhalev/">Peter Čuhalev</a></h5>
+          <p>founder, product, design, uxui, bread</p>
+        </li>
+        <li>
+          <img class="avatar" src="assets/img/geekatrons-404.svg"/>
           <h5><a href="https://www.linkedin.com/in/domen-ko%C5%BEar-b753779/">Domen Kožar</a></h5>
           <p>functional programming, nixos, devops, haskell, sports</p>
         </li>
@@ -205,6 +210,16 @@
           <img class="avatar" src="assets/img/geekatrons-404.svg"/>
           <h5><a href="https://www.linkedin.com/in/primozjakin/">Primož Jakin</a></h5>
           <p>growth, marketing, pr, copy, fitness</p>
+        </li>
+        <li>
+          <img class="avatar" src="assets/img/geekatrons-404.svg"/>
+          <h5><a href="https://www.linkedin.com/in/nejc-ilenic/">Nejc Ilenic</a></h5>
+          <p>python, scala, machine learning, hiking, mtb</p>
+        </li>
+        <li>
+          <img class="avatar" src="assets/img/geekatrons-404.svg"/>
+          <h5><a href="https://www.linkedin.com/in/sabina-hosta-13a00a135/">Sabina Hosta</a></h5>
+          <p>founder, design, video, web, organization, fashion</p>
         </li>
       </ul>
     </div>
@@ -258,37 +273,17 @@
   </div>
 </div>
 
-<div class="section cryptomarket" id="crypto">
+<div class="section footer" id="footer">
   <div class="row">
     <div class="large-8">
-      <h3>Cryptomarket status</h3>
-      <script type="text/javascript">
-        crypt_multi_num_cur = "4";
-        crypt_base_cur_0 = "Bitcoin (BTC)";
-        crypt_target_cur_0 = "US Dollar (USD)";
-        crypt_base_cur_1 = "Ethereum (ETH)";
-        crypt_target_cur_1 = "US Dollar (USD)";
-        crypt_base_cur_2 = "Ripple (XRP)";
-        crypt_target_cur_2 = "US Dollar (USD)";
-        crypt_base_cur_3 = "ADA (ADA)";
-        crypt_target_cur_3 = "US Dollar (USD)";
-        crypt_multi_background_color = "#FFFFF0";
-        crypt_multi_border_width = 0;
-        crypt_multi_font_family = "Verdana";
-        crypt_multi_font_color = "#000001";
-      </script>
-      <script type="text/javascript" src="https://www.cryptonator.com/ui/js/widget/multi_widget.js"></script>
+      <img class="logo" src="assets/img/geekatrons-horizontal.svg"/> geekatrons <span class="hide-for-small-only" id="date-footer">collective 2020</span>
     </div>
   </div>
 </div>
 
-<div class="section footer" id="footer">
-  <div class="row">
-    <div class="large-8">
-      <img class="logo" src="assets/img/geekatrons-horizontal.svg"/> geekatrons <span class="hide-for-small-only">collective 2020</span>
-    </div>
-  </div>
-</div>
+<script>
+  document.getElementById("date-footer").innerHTML = "collective " + new Date().getFullYear();
+</script>
 
 
 <script src="assets/js/app.js"></script>
